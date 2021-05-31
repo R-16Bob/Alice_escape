@@ -1,0 +1,7 @@
+CC = gcc
+AR = $(CC)ar
+CFLAGS= -I/usr/include/SDL -lSDL -lpthread -lSDL_ttf
+alice_escape:Alice_escape.c
+	$(CC) $^ -o $@ $(CFLAGS)
+clean:
+	-rm -f $(EXEC) *.elf *.gdb *.o
